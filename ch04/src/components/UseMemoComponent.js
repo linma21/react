@@ -15,6 +15,8 @@ const UseMemoComponent = () => {
   const [heavyNum, setHeavyNum] = useState(1);
   const [lightNum, setLightNum] = useState(1);
 
+
+  // heavyNum 상태 값이 업데이트 될 때만 heavyCalc 실행
   const heavyResult = useMemo(()=>{
     return heavyCalc(heavyNum);
   }, [heavyNum]);

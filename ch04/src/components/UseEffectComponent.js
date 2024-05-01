@@ -1,8 +1,21 @@
 import React, { useEffect, useState } from 'react'
 
+const UnmountTest = () => {
+  useEffect(() => {
+    console.log("mount...");
+
+    return () => {
+      console.log("unmount...");
+    };
+  }, []);
+
+  return <div>UnmountTest Component</div>;
+};
+
 const UseEffectComponent = () => {
   const [name, setName] = useState("홍길동");
   const [age, setAge] = useState(20);
+  const [showUnmountTest, setShowUnmountTest] = useState(false);
 
   // mount 단계 : 컴포넌트가 브라우저에 출력되는 단계
   useEffect(() => {
@@ -31,6 +44,10 @@ const UseEffectComponent = () => {
       <input type='text' value={name} onChange={(e) => {setName(e.target.value)}}></input><br />
       <p>나이 : {age}</p>
       <input type='text' value={age} onChange={(e) => {setAge(e.target.value)}}></input><br />
+      <p>
+        <button onClick={() => setShowUnmountTest(!showUnmountTest)}>UnmountTest</button>
+      </p>
+      {showUnmountTest && <UnmountTest />}
     </div>
   )
 }
