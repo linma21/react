@@ -1,9 +1,17 @@
-import React from 'react'
+import React from "react";
+import SubLayout from "../../layouts/SubLayout";
+import DefaultLayout from "../../layouts/DefaultLayout";
 
 const NoticePage = () => {
   return (
-    <div>NoticePage</div>
-  )
-}
+    <DefaultLayout>
+      <SubLayout>
+        {/* 내용 시작 */}
 
-export default NoticePage
+        {/* 내용 끝 */}
+      </SubLayout>
+    </DefaultLayout>
+  );
+};
+
+export default NoticePage;

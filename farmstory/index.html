@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat App</title>
+    
+    <style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    display: flex;
+}
+.sidebar {
+    background-color: #F4F4F4;
+    padding: 15px;
+    width: 200px;
+    height: 100vh;
+}
+.sidebar h2 {
+    color: #333;
+}
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+.sidebar ul li {
+    margin: 10px 0;
+}
+.sidebar ul li a {
+    text-decoration: none;
+    color: #333;
+}
+.main-content {
+    flex: 1;
+    padding: 20px;
+}
+header {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+header h1 {
+    margin: 0;
+}
+header p {
+    margin: 5px 0;
+}
+header button {
+    background-color: #555;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+.latest-chats {
+    margin: 20px 0;
+}
+.latest-chats h2 {
+    margin-bottom: 10px;
+}
+.chat-box {
+    background-color: #F9F9F9;
+    padding: 15px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+}
+.chat-box h3 {
+    margin: 0 0 5px 0;
+}
+.chat-box p {
+    margin: 5px 0;
+}
+.chat-box .chat-member {
+    color: #888;
+}
+.create-group {
+    margin: 20px 0;
+}
+.create-group h2 {
+    margin-bottom: 10px;
+}
+.create-group form {
+    display: flex;
+    flex-direction: column;
+}
+.create-group label {
+    margin: 5px 0;
+}
+.create-group input {
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ddd;
+}
+.create-group .members {
+    display: flex;
+    flex-wrap: wrap;
+}
+.create-group .members span {
+    background-color: #F4F4F4;
+    margin: 5px;
+    padding: 5px 10px;
+    border: 1px solid #ddd;
+}
+.create-group button {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <h2>Chat App</h2>
+        <ul>
+            <li><a href="#">New Chat</a></li>
+            <li><a href="#">1:1 Chat</a></li>
+            <li><a href="#">Group Chat</a></li>
+            <li><a href="#">Delete Chat</a></li>
+        </ul>
+    </div>
+    <div class="main-content">
+        <header>
+            <h1>John Doe</h1>
+            <p>Welcome to the Chat App!</p>
+            <button>Edit Profile</button>
+        </header>
+        <section class="latest-chats">
+            <h2>Latest Chats</h2>
+            <div class="chat-box">
+                <h3>Friend Chat 1</h3>
+                <p>Hey! How are you doing?</p>
+                <p class="chat-member">Friend A</p>
+            </div>
+            <div class="chat-box">
+                <h3>Family Chat</h3>
+                <p>Planning for a picnic this weekend.</p>
+            </div>
+            <div class="chat-box">
+                <h3>Work Chat</h3>
+                <p>Meeting moved to 3 pm.</p>
+            </div>
+            <div class="chat-box">
+                <h3>Group Chat 1</h3>
+                <p>Discussing weekend plans.</p>
+            </div>
+        </section>
+        <section class="create-group">
+            <h2>Create New Group</h2>
+            <form>
+                <label for="group-name">Group Name</label>
+                <input type="text" id="group-name" name="group-name">
+                <div class="members">
+                    <label>Members</label>
+                    <span>Friend A</span>
+                    <span>Friend B</span>
+                    <span>Friend C</span>
+                </div>
+                <button type="submit">Create Group</button>
+            </form>
+        </section>
+    </div>
+</body>
+</html>

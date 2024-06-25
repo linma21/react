@@ -1,5 +1,6 @@
 import logo from './logo.svg';
-import './App.css';
+import './styles/style.scss';
+import './styles/admin.scss';
 import { RouterProvider } from 'react-router-dom';
 import root from "./router/root";
 /*
@@ -11,6 +12,7 @@ import root from "./router/root";
   npm install @reduxjs/toolkit react-redux
   npm install axios
   npm install react-cookie
+  npm install sacc
 */
 function App() {
   return <RouterProvider router={root} />;

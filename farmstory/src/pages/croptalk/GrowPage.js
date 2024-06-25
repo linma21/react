@@ -1,9 +1,17 @@
 import React from 'react'
+import SubLayout from '../../layouts/SubLayout';
+import DefaultLayout from '../../layouts/DefaultLayout';
 
 const GrowPage = () => {
   return (
-    <div>GrowPage</div>
-  )
+    <DefaultLayout>
+    <SubLayout>
+      {/* 내용 시작 */}
+      
+      {/* 내용 끝 */}
+    </SubLayout>
+  </DefaultLayout>
+)
 }
 
 export default GrowPage

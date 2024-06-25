@@ -1,8 +1,14 @@
 import React from 'react'
+import DefaultLayout from '../../layouts/DefaultLayout';
+import Register from '../../components/user/Register';
 
 const RegisterPage = () => {
   return (
-    <div>RegisterPage</div>
+    <DefaultLayout>
+      <div id="user">
+            <Register />
+        </div>
+    </DefaultLayout>
   )
 }
 
